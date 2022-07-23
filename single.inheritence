@@ -1,0 +1,68 @@
+package q11263;
+class Marks
+{
+	int id;
+	float javaMarks;
+	float cMarks,cppMarks;
+	void setMarks(int a,float b,float c,float  d)
+{
+	id=a;
+	javaMarks=b;
+	cMarks=c;
+	cppMarks=d;
+}
+void displayMarks(int id,float JavaMarks,float cMarks,float cppMarks)
+{
+	System.out.println("Id : "+id);
+	System.out.println("Java marks : "+javaMarks);
+	System.out.println("C marks : "+cMarks);
+	System.out.println("Cpp marks : "+cppMarks);
+}
+}
+class Result extends Marks
+{
+	float total;
+	float avg;
+	void compute(float b,float c,float d)
+	{
+		total=b+c+d;
+		avg=total/3;
+	}
+	void showResult()
+	{
+		System.out.println("Total : "+total);
+		System.out.println("Avg : "+avg);
+	}
+	}
+	class SingleInheritanceDemo
+	{
+		public static void main(String args[])
+		{
+			int a=Integer.parseInt(args[0]);
+			float b=Float.parseFloat(args[1]);
+			float c=Float.parseFloat(args[2]);
+			float d=Float.parseFloat(args[3]);
+			Result sc=new Result();
+			sc.setMarks(a,b,c,d);
+			sc.displayMarks(a,b,c,d);
+			sc.compute(b,c,d);
+			sc.showResult();
+}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

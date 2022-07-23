@@ -1,4 +1,3 @@
-package q11286;
 public class Area {
 	public static void main(String args[]) {
 		FindArea area = new FindArea();

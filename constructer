@@ -1,0 +1,20 @@
+class Staff
+{
+	int id;
+	String name;
+	Staff(int x,String y)
+	{
+		id=x;
+		name=y;
+	}
+	public void show()
+	{
+		System.out.println("Id : "+id);
+		System.out.println("Name : "+name);
+	}
+	public static void main(String args[])
+	{int x=Integer.parseInt(args[0]);
+	Staff sc=new Staff(x,args[1]);
+	sc.show();
+	}
+}

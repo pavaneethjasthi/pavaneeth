@@ -1,0 +1,63 @@
+class VolumeBox
+{
+	double width;
+	double height;
+	double depth,volume;
+VolumeBox()
+{
+    System.out.print("Volume of Box() is : ");
+	width=-1;
+	height=-1;
+	depth=-1;
+}
+VolumeBox(double length)
+{
+	System.out.print("Volume of Box("+length+") is : ");
+	width=length;
+	height=length;
+	depth=length;
+}
+VolumeBox(double w,double h,double d)
+{
+	System.out.print("Volume of Box("+w+", "+h+", "+d+") is : ");
+	width=w;
+	height=h;
+	depth=d;
+}
+public void volume()
+{
+	volume=width*height*depth;
+	System.out.println(volume);
+}
+}
+class Box
+{
+	public static void main(String args[])
+	{
+		double arr[]=new double[3];
+		for(int i=0;i<args.length;i++)
+	    {
+		  arr[i]=Double.parseDouble(args[i]);
+	    }
+	    if(args.length==0)
+	    {
+		  VolumeBox b=new VolumeBox();
+		  b.volume();
+	    }
+	   /* else if(args.length==1)
+	    {
+	    	VolumeBox b = new VolumeBox();
+	    	b.volume();
+	    }*/
+	    else if(args.length==1)
+	    {
+	    	VolumeBox b = new VolumeBox(arr[0]);
+	    	b.volume();
+	    }
+	    else
+	    {
+	    	VolumeBox b = new VolumeBox(arr[0],arr[1],arr[2]);
+	    	b.volume();
+	    }
+	}
+}
